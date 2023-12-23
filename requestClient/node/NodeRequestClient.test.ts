@@ -1,3 +1,5 @@
+
+import { jest } from '@jest/globals';
 import { HttpModule, NodeRequestClient } from "./NodeRequestClient";
 import { RequestMethod } from "../../../core/request/types/RequestMethod";
 import { EventEmitter } from "events";
@@ -21,7 +23,7 @@ function createMockHttpModule (
     const http = {
         request: jest.fn((
             // @ts-ignore
-            options, callback) => {
+            options, callback : any) => {
 
             const res : any = new EventEmitter();
             response = res;

@@ -1,5 +1,6 @@
 // Copyright (c) 2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
+import { jest } from '@jest/globals';
 import { addNodeInitializer } from './addNodeInitializer';
 import { HgNode } from "../../HgNode";
 import { LogLevel } from "../../../core/types/LogLevel";
