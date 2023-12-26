@@ -1,14 +1,14 @@
 // Copyright (c) 2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
+import { jest } from '@jest/globals';
 import { init as i18nInit, changeLanguage } from "i18next";
-import { Language } from "../core/types/Language";
-import { TranslationFunction } from "../core/types/TranslationFunction";
-import { TranslationResourceObject } from "../core/types/TranslationResourceObject";
+import { Language } from "../../core/types/Language";
+import { TranslationResourceObject } from "../../core/types/TranslationResourceObject";
 import { BackendTranslationServiceImpl } from "./BackendTranslationServiceImpl";
 
 jest.mock('i18next', () => ({
     changeLanguage: jest.fn(),
-    init: jest.fn().mockResolvedValue(undefined),
+    init: jest.fn(),
 }));
 
 describe('BackendTranslationServiceImpl', () => {
