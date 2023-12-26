@@ -2,7 +2,7 @@
 
 import { resolve as pathResolve } from "path";
 import { ResponseEntity } from "../../../../core/request/types/ResponseEntity";
-import { HelmetContextServiceImpl } from "../../frontend/services/HelmetContextServiceImpl";
+import { HelmetContextServiceImpl } from "../../../../frontend/services/HelmetContextServiceImpl";
 import { FileSystemService } from "../services/FileSystemService";
 import { LogService } from "../../../../core/LogService";
 import { StaticReactAppService } from "../services/StaticReactAppService";
