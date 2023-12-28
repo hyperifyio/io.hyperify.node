@@ -1,7 +1,8 @@
 // Copyright (c) 2023. Heusala Group Oy <info@hg.fi>. All rights reserved.
 
+import { jest } from '@jest/globals';
 import { decode as jwsDecode } from 'jws';
-import { LogLevel } from "../core/types/LogLevel";
+import { LogLevel } from "../../core/types/LogLevel";
 import { JwtDecodeServiceImpl } from "./JwtDecodeServiceImpl";
 
 // Mock the 'jws' module
