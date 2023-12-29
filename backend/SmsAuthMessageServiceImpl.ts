@@ -1,8 +1,8 @@
 // Copyright (c) 2022-2023. <info@heusalagroup.fi>. All rights reserved.
 
-import { TwilioMessageClient } from "../core/twilio/TwilioMessageClient";
-import { Language } from "../core/types/Language";
-import { TranslationService } from "../core/i18n/TranslationService";
+import { TwilioMessageClient } from "../../core/twilio/TwilioMessageClient";
+import { Language } from "../../core/types/Language";
+import { TranslationService } from "../../core/i18n/TranslationService";
 import {
     T_M_AUTH_CODE_BODY_HTML,
     T_M_AUTH_CODE_BODY_TEXT,
@@ -11,11 +11,11 @@ import {
     T_M_AUTH_CODE_HEADER_HTML,
     T_M_AUTH_CODE_HEADER_TEXT,
     T_M_AUTH_CODE_SUBJECT
-} from "../core/auth/sms/sms-auth-translations";
+} from "../../core/auth/sms/sms-auth-translations";
 import { BackendTranslationServiceImpl } from "./BackendTranslationServiceImpl";
-import { SmsAuthMessageService } from "../core/auth/SmsAuthMessageService";
-import { LogService } from "../core/LogService";
-import { LogLevel } from "../core/types/LogLevel";
+import { SmsAuthMessageService } from "../../core/auth/SmsAuthMessageService";
+import { LogService } from "../../core/LogService";
+import { LogLevel } from "../../core/types/LogLevel";
 
 const LOG = LogService.createLogger('SmsAuthMessageServiceImpl');
 

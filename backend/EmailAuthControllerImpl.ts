@@ -1,27 +1,23 @@
 // Copyright (c) 2022-2023. <info@heusalagroup.fi>. All rights reserved.
 
-import { EmailAuthController } from "../core/auth/EmailAuthController";
-import { JsonAny, ReadonlyJsonAny } from "../core/Json";
-import { JwtDecodeService } from "../core/jwt/JwtDecodeService";
-import { ResponseEntity } from "../core/request/types/ResponseEntity";
-import { createErrorDTO, ErrorDTO } from "../core/types/ErrorDTO";
-import { Language, parseLanguage } from "../core/types/Language";
-import { EmailAuthMessageService } from "../core/auth/EmailAuthMessageService";
-import { EmailTokenService } from "../core/auth/EmailTokenService";
-import { EmailVerificationService } from "../core/auth/EmailVerificationService";
-import { LogService } from "../core/LogService";
-import { isAuthenticateEmailDTO } from "../core/auth/email/types/AuthenticateEmailDTO";
-import { isVerifyEmailTokenDTO } from "../core/auth/email/types/VerifyEmailTokenDTO";
-import {
-    createVerifyEmailCodeDTO,
-    isVerifyEmailCodeDTO,
-    VerifyEmailCodeDTO
-} from "../core/auth/email/types/VerifyEmailCodeDTO";
-import { createEmailTokenDTO, EmailTokenDTO } from "../core/auth/email/types/EmailTokenDTO";
+import { EmailAuthController } from "../../core/auth/EmailAuthController";
+import { ReadonlyJsonAny } from "../../core/Json";
+import { JwtDecodeService } from "../../core/jwt/JwtDecodeService";
+import { ResponseEntity } from "../../core/request/types/ResponseEntity";
+import { createErrorDTO, ErrorDTO } from "../../core/types/ErrorDTO";
+import { Language, parseLanguage } from "../../core/types/Language";
+import { EmailAuthMessageService } from "../../core/auth/EmailAuthMessageService";
+import { EmailTokenService } from "../../core/auth/EmailTokenService";
+import { EmailVerificationService } from "../../core/auth/EmailVerificationService";
+import { LogService } from "../../core/LogService";
+import { isAuthenticateEmailDTO } from "../../core/auth/email/types/AuthenticateEmailDTO";
+import { isVerifyEmailTokenDTO } from "../../core/auth/email/types/VerifyEmailTokenDTO";
+import { isVerifyEmailCodeDTO } from "../../core/auth/email/types/VerifyEmailCodeDTO";
+import { EmailTokenDTO } from "../../core/auth/email/types/EmailTokenDTO";
 import { JwtDecodeServiceImpl } from "./JwtDecodeServiceImpl";
-import { isString } from "../core/types/String";
-import { LogLevel } from "../core/types/LogLevel";
-import { createSendEmailCodeDTO, sendEmailCodeDTO } from "../core/auth/email/types/SendEmailCodeDTO";
+import { isString } from "../../core/types/String";
+import { LogLevel } from "../../core/types/LogLevel";
+import { createSendEmailCodeDTO, sendEmailCodeDTO } from "../../core/auth/email/types/SendEmailCodeDTO";
 
 const LOG = LogService.createLogger('EmailAuthControllerImpl');
 

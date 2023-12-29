@@ -1,12 +1,13 @@
 // Copyright (c) 2023. Heusala Group Oy <info@hg.fi>. All rights reserved.
 
-import { EmailAuthMessageService } from "../core/auth/EmailAuthMessageService";
-import { EmailTokenService } from "../core/auth/EmailTokenService";
-import { EmailVerificationService } from "../core/auth/EmailVerificationService";
-import { JwtDecodeService } from "../core/jwt/JwtDecodeService";
-import { ResponseEntity } from "../core/request/types/ResponseEntity";
-import { Language } from "../core/types/Language";
-import { LogLevel } from "../core/types/LogLevel";
+import { jest } from '@jest/globals';
+import { EmailAuthMessageService } from "../../core/auth/EmailAuthMessageService";
+import { EmailTokenService } from "../../core/auth/EmailTokenService";
+import { EmailVerificationService } from "../../core/auth/EmailVerificationService";
+import { JwtDecodeService } from "../../core/jwt/JwtDecodeService";
+import { ResponseEntity } from "../../core/request/types/ResponseEntity";
+import { Language } from "../../core/types/Language";
+import { LogLevel } from "../../core/types/LogLevel";
 import { EmailAuthControllerImpl } from "./EmailAuthControllerImpl";
 
 describe('EmailAuthControllerImpl', () => {
@@ -26,28 +27,28 @@ describe('EmailAuthControllerImpl', () => {
         jest.resetAllMocks();
 
         emailTokenService = {
-            verifyToken: jest.fn(),
-            verifyValidTokenForSubject: jest.fn(),
-            isTokenValid: jest.fn(),
-            verifyTokenOnly: jest.fn(),
-            createUnverifiedEmailToken: jest.fn(),
-            createVerifiedEmailToken: jest.fn(),
+            verifyToken: jest.fn<any>(),
+            verifyValidTokenForSubject: jest.fn<any>(),
+            isTokenValid: jest.fn<any>(),
+            verifyTokenOnly: jest.fn<any>(),
+            createUnverifiedEmailToken: jest.fn<any>(),
+            createVerifiedEmailToken: jest.fn<any>(),
         };
         emailVerificationService = {
-            destroy: jest.fn(),
-            verifyCode: jest.fn(),
-            removeVerificationCode: jest.fn(),
-            createVerificationCode: jest.fn(),
+            destroy: jest.fn<any>(),
+            verifyCode: jest.fn<any>(),
+            removeVerificationCode: jest.fn<any>(),
+            createVerificationCode: jest.fn<any>(),
         };
         emailAuthMessageService = {
-            sendAuthenticationCode: jest.fn()
+            sendAuthenticationCode: jest.fn<any>()
         };
         jwtDecodeService = {
-            setLogLevel: jest.fn(),
-            decodePayload: jest.fn(),
-            decodePayloadAudience: jest.fn(),
-            decodePayloadSubject: jest.fn(),
-            decodePayloadVerified: jest.fn(),
+            setLogLevel: jest.fn<any>(),
+            decodePayload: jest.fn<any>(),
+            decodePayloadAudience: jest.fn<any>(),
+            decodePayloadSubject: jest.fn<any>(),
+            decodePayloadVerified: jest.fn<any>(),
         };
 
         controller = EmailAuthControllerImpl.create(
@@ -128,7 +129,7 @@ describe('EmailAuthControllerImpl', () => {
                 email: 'test@email.com',
                 verified: false
             });
-            (emailAuthMessageService.sendAuthenticationCode as jest.Mock).mockResolvedValue(undefined);
+            (emailAuthMessageService.sendAuthenticationCode as jest.Mock<any>).mockResolvedValue(undefined);
 
             // When
             const result = await controller.authenticateEmail(body, langString);

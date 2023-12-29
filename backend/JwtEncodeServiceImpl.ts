@@ -1,11 +1,11 @@
 // Copyright (c) 2021-2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
 import { Algorithm, sign as jwsSign, verify as jwsVerify } from "jws";
-import { JwtEngine } from "../core/jwt/JwtEngine";
-import { ReadonlyJsonObject } from "../core/Json";
-import { LogService } from "../core/LogService";
-import { LogLevel } from "../core/types/LogLevel";
-import { JwtEncodeService } from "../core/jwt/JwtEncodeService";
+import { JwtEngine } from "../../core/jwt/JwtEngine";
+import { ReadonlyJsonObject } from "../../core/Json";
+import { LogService } from "../../core/LogService";
+import { LogLevel } from "../../core/types/LogLevel";
+import { JwtEncodeService } from "../../core/jwt/JwtEncodeService";
 
 const LOG = LogService.createLogger('JwtServiceImpl');
 

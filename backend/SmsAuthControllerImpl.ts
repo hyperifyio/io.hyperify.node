@@ -1,24 +1,24 @@
 // Copyright (c) 2022-2023. <info@heusalagroup.fi>. All rights reserved.
 
-import { SmsAuthController } from "../core/auth/SmsAuthController";
-import { trim } from "../core/functions/trim";
-import { ReadonlyJsonAny } from "../core/Json";
-import { JwtDecodeService } from "../core/jwt/JwtDecodeService";
-import { PhoneNumberUtils } from "../core/PhoneNumberUtils";
-import { ResponseEntity } from "../core/request/types/ResponseEntity";
-import { createErrorDTO, ErrorDTO } from "../core/types/ErrorDTO";
-import { Language, parseLanguage } from "../core/types/Language";
-import { SmsAuthMessageService } from "../core/auth/SmsAuthMessageService";
-import { SmsTokenService } from "../core/auth/SmsTokenService";
-import { SmsVerificationService } from "../core/auth/SmsVerificationService";
-import { LogService } from "../core/LogService";
-import { isAuthenticateSmsDTO } from "../core/auth/sms/types/AuthenticateSmsDTO";
-import { isVerifySmsTokenDTO } from "../core/auth/sms/types/VerifySmsTokenDTO";
-import { isVerifySmsCodeDTO } from "../core/auth/sms/types/VerifySmsCodeDTO";
-import { SmsTokenDTO } from "../core/auth/sms/types/SmsTokenDTO";
+import { SmsAuthController } from "../../core/auth/SmsAuthController";
+import { trim } from "../../core/functions/trim";
+import { ReadonlyJsonAny } from "../../core/Json";
+import { JwtDecodeService } from "../../core/jwt/JwtDecodeService";
+import { PhoneNumberUtils } from "../../core/PhoneNumberUtils";
+import { ResponseEntity } from "../../core/request/types/ResponseEntity";
+import { createErrorDTO, ErrorDTO } from "../../core/types/ErrorDTO";
+import { Language, parseLanguage } from "../../core/types/Language";
+import { SmsAuthMessageService } from "../../core/auth/SmsAuthMessageService";
+import { SmsTokenService } from "../../core/auth/SmsTokenService";
+import { SmsVerificationService } from "../../core/auth/SmsVerificationService";
+import { LogService } from "../../core/LogService";
+import { isAuthenticateSmsDTO } from "../../core/auth/sms/types/AuthenticateSmsDTO";
+import { isVerifySmsTokenDTO } from "../../core/auth/sms/types/VerifySmsTokenDTO";
+import { isVerifySmsCodeDTO } from "../../core/auth/sms/types/VerifySmsCodeDTO";
+import { SmsTokenDTO } from "../../core/auth/sms/types/SmsTokenDTO";
 import { JwtDecodeServiceImpl } from "./JwtDecodeServiceImpl";
-import { isString } from "../core/types/String";
-import { LogLevel } from "../core/types/LogLevel";
+import { isString } from "../../core/types/String";
+import { LogLevel } from "../../core/types/LogLevel";
 
 const LOG = LogService.createLogger('SmsAuthControllerImpl');
 

@@ -1,7 +1,8 @@
 // Copyright (c) 2023. Heusala Group Oy <info@hg.fi>. All rights reserved.
 
+import { jest } from '@jest/globals';
 import { randomInt } from "crypto";
-import { CryptoService } from "../core/crypto/CryptoService";
+import { CryptoService } from "../../core/crypto/CryptoService";
 import { CryptoServiceImpl } from "./CryptoServiceImpl";
 
 jest.mock('crypto', () => ({

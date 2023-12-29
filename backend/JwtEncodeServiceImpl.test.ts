@@ -1,6 +1,7 @@
 // Copyright (c) 2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { JwtEngine } from "../core/jwt/JwtEngine";
+import { jest } from '@jest/globals';
+import { JwtEngine } from "../../core/jwt/JwtEngine";
 import { JwtEncodeServiceImpl } from './JwtEncodeServiceImpl';
 import { sign as mockJwsSign, verify as mockJwsVerify } from 'jws';
 

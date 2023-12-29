@@ -1,8 +1,9 @@
 // Copyright (c) 2023. Heusala Group Oy <info@hg.fi>. All rights reserved.
 
+import { jest } from '@jest/globals';
 import { createTransport } from 'nodemailer';
-import { EmailMessage } from "../core/email/types/EmailMessage";
-import { LogLevel } from "../core/types/LogLevel";
+import { EmailMessage } from "../../core/email/types/EmailMessage";
+import { LogLevel } from "../../core/types/LogLevel";
 import { EmailServiceImpl } from "./EmailServiceImpl";
 
 const mockTransporter = {

@@ -1,12 +1,13 @@
 // Copyright (c) 2023. Heusala Group Oy <info@hg.fi>. All rights reserved.
 
-import { SmsAuthMessageService } from "../core/auth/SmsAuthMessageService";
-import { SmsTokenService } from "../core/auth/SmsTokenService";
-import { SmsVerificationService } from "../core/auth/SmsVerificationService";
-import { JwtDecodeService } from "../core/jwt/JwtDecodeService";
-import { ResponseEntity } from "../core/request/types/ResponseEntity";
-import { Language } from "../core/types/Language";
-import { LogLevel } from "../core/types/LogLevel";
+import { jest } from '@jest/globals';
+import { SmsAuthMessageService } from "../../core/auth/SmsAuthMessageService";
+import { SmsTokenService } from "../../core/auth/SmsTokenService";
+import { SmsVerificationService } from "../../core/auth/SmsVerificationService";
+import { JwtDecodeService } from "../../core/jwt/JwtDecodeService";
+import { ResponseEntity } from "../../core/request/types/ResponseEntity";
+import { Language } from "../../core/types/Language";
+import { LogLevel } from "../../core/types/LogLevel";
 import { SmsAuthControllerImpl } from "./SmsAuthControllerImpl";
 
 describe('SmsAuthControllerImpl', () => {
@@ -26,28 +27,28 @@ describe('SmsAuthControllerImpl', () => {
         jest.resetAllMocks();
 
         smsTokenService = {
-            verifyToken: jest.fn(),
-            verifyValidTokenForSubject: jest.fn(),
-            isTokenValid: jest.fn(),
-            verifyTokenOnly: jest.fn(),
-            createUnverifiedSmsToken: jest.fn(),
-            createVerifiedSmsToken: jest.fn(),
+            verifyToken: jest.fn<any>(),
+            verifyValidTokenForSubject: jest.fn<any>(),
+            isTokenValid: jest.fn<any>(),
+            verifyTokenOnly: jest.fn<any>(),
+            createUnverifiedSmsToken: jest.fn<any>(),
+            createVerifiedSmsToken: jest.fn<any>(),
         };
         smsVerificationService = {
-            destroy: jest.fn(),
-            verifyCode: jest.fn(),
-            removeVerificationCode: jest.fn(),
-            createVerificationCode: jest.fn(),
+            destroy: jest.fn<any>(),
+            verifyCode: jest.fn<any>(),
+            removeVerificationCode: jest.fn<any>(),
+            createVerificationCode: jest.fn<any>(),
         };
         smsAuthMessageService = {
-            sendAuthenticationCode: jest.fn()
+            sendAuthenticationCode: jest.fn<any>()
         };
         jwtDecodeService = {
-            setLogLevel: jest.fn(),
-            decodePayload: jest.fn(),
-            decodePayloadAudience: jest.fn(),
-            decodePayloadSubject: jest.fn(),
-            decodePayloadVerified: jest.fn(),
+            setLogLevel: jest.fn<any>(),
+            decodePayload: jest.fn<any>(),
+            decodePayloadAudience: jest.fn<any>(),
+            decodePayloadSubject: jest.fn<any>(),
+            decodePayloadVerified: jest.fn<any>(),
         };
 
         controller = SmsAuthControllerImpl.create(
@@ -129,7 +130,7 @@ describe('SmsAuthControllerImpl', () => {
                 sms: 'test@sms.com',
                 verified: false
             });
-            (smsAuthMessageService.sendAuthenticationCode as jest.Mock).mockResolvedValue(undefined);
+            (smsAuthMessageService.sendAuthenticationCode as jest.Mock<any>).mockResolvedValue(undefined);
 
             // When
             const result = await controller.authenticateSms(body, langString);

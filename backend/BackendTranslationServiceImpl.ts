@@ -1,15 +1,15 @@
 // Copyright (c) 2021-2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
 import { init as i18nInit, changeLanguage, Resource } from "i18next";
-import { Language } from "../core/types/Language";
-import { ReadonlyJsonObject } from "../core/Json";
-import { LogService } from "../core/LogService";
-import { TranslationResourceObject } from "../core/types/TranslationResourceObject";
-import { TranslatedObject } from "../core/types/TranslatedObject";
-import { TranslationUtils } from "../core/TranslationUtils";
-import { LogLevel } from "../core/types/LogLevel";
-import { TranslationFunction } from "../core/types/TranslationFunction";
-import { TranslationService } from "../core/i18n/TranslationService";
+import { Language } from "../../core/types/Language";
+import { ReadonlyJsonObject } from "../../core/Json";
+import { LogService } from "../../core/LogService";
+import { TranslationResourceObject } from "../../core/types/TranslationResourceObject";
+import { TranslatedObject } from "../../core/types/TranslatedObject";
+import { TranslationUtils } from "../../core/TranslationUtils";
+import { LogLevel } from "../../core/types/LogLevel";
+import { TranslationFunction } from "../../core/types/TranslationFunction";
+import { TranslationService } from "../../core/i18n/TranslationService";
 
 const LOG = LogService.createLogger('BackendTranslationService');
 

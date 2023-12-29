@@ -1,16 +1,15 @@
 // Copyright (c) 2021-2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
 import { createTransport } from 'nodemailer';
-import { uniq } from "../core/functions/uniq";
-import { trim } from "../core/functions/trim";
-import { LogService } from "../core/LogService";
-import { isArray } from "../core/types/Array";
-import { LogLevel } from "../core/types/LogLevel";
-import { parseBoolean } from "../core/types/Boolean";
-import { parseNonEmptyString } from "../core/types/String";
-
-import { EmailMessage } from "../core/email/types/EmailMessage";
-import { EmailService } from "../core/email/EmailService";
+import { uniq } from "../../core/functions/uniq";
+import { trim } from "../../core/functions/trim";
+import { LogService } from "../../core/LogService";
+import { isArray } from "../../core/types/Array";
+import { LogLevel } from "../../core/types/LogLevel";
+import { parseBoolean } from "../../core/types/Boolean";
+import { parseNonEmptyString } from "../../core/types/String";
+import { EmailMessage } from "../../core/email/types/EmailMessage";
+import { EmailService } from "../../core/email/EmailService";
 
 const LOG = LogService.createLogger('EmailServiceImpl');
 

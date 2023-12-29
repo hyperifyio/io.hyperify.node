@@ -1,8 +1,8 @@
 // Copyright (c) 2022-2023. <info@heusalagroup.fi>. All rights reserved.
 
-import { EmailMessage } from "../core/email/types/EmailMessage";
-import { Language } from "../core/types/Language";
-import { TranslationService } from "../core/i18n/TranslationService";
+import { EmailMessage } from "../../core/email/types/EmailMessage";
+import { Language } from "../../core/types/Language";
+import { TranslationService } from "../../core/i18n/TranslationService";
 import {
     T_M_AUTH_CODE_BODY_HTML,
     T_M_AUTH_CODE_BODY_TEXT,
@@ -11,12 +11,12 @@ import {
     T_M_AUTH_CODE_HEADER_HTML,
     T_M_AUTH_CODE_HEADER_TEXT,
     T_M_AUTH_CODE_SUBJECT
-} from "../core/auth/email/email-auth-translations";
+} from "../../core/auth/email/email-auth-translations";
 import { BackendTranslationServiceImpl } from "./BackendTranslationServiceImpl";
-import { EmailAuthMessageService } from "../core/auth/EmailAuthMessageService";
-import { LogService } from "../core/LogService";
-import { LogLevel } from "../core/types/LogLevel";
-import { EmailService } from "../core/email/EmailService";
+import { EmailAuthMessageService } from "../../core/auth/EmailAuthMessageService";
+import { LogService } from "../../core/LogService";
+import { LogLevel } from "../../core/types/LogLevel";
+import { EmailService } from "../../core/email/EmailService";
 
 const LOG = LogService.createLogger('EmailAuthMessageServiceImpl');
 

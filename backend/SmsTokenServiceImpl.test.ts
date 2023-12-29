@@ -1,8 +1,9 @@
 // Copyright (c) 2023. Heusala Group Oy <info@hg.fi>. All rights reserved.
 
-import { JwtDecodeService } from "../core/jwt/JwtDecodeService";
-import { JwtEngine } from "../core/jwt/JwtEngine";
-import { LogLevel } from "../core/types/LogLevel";
+import { jest } from '@jest/globals';
+import { JwtDecodeService } from "../../core/jwt/JwtDecodeService";
+import { JwtEngine } from "../../core/jwt/JwtEngine";
+import { LogLevel } from "../../core/types/LogLevel";
 import { SmsTokenServiceImpl } from "./SmsTokenServiceImpl";
 
 describe('SmsTokenServiceImpl', () => {
@@ -13,18 +14,18 @@ describe('SmsTokenServiceImpl', () => {
 
     // Initial setup
     const jwtEngine : JwtEngine = {
-        getDefaultAlgorithm: jest.fn(),
-        setDefaultAlgorithm: jest.fn(),
-        sign: jest.fn(),
-        verify: jest.fn(),
+        getDefaultAlgorithm: jest.fn<any>(),
+        setDefaultAlgorithm: jest.fn<any>(),
+        sign: jest.fn<any>(),
+        verify: jest.fn<any>(),
     };
 
     const jwtDecodeService : JwtDecodeService = {
-        setLogLevel: jest.fn(),
-        decodePayload: jest.fn(),
-        decodePayloadAudience: jest.fn(),
-        decodePayloadSubject: jest.fn(),
-        decodePayloadVerified: jest.fn(),
+        setLogLevel: jest.fn<any>(),
+        decodePayload: jest.fn<any>(),
+        decodePayloadAudience: jest.fn<any>(),
+        decodePayloadSubject: jest.fn<any>(),
+        decodePayloadVerified: jest.fn<any>(),
     };
 
     const service = SmsTokenServiceImpl.create(

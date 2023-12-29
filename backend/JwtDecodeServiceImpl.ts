@@ -1,12 +1,12 @@
 // Copyright (c) 2021-2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
 import { decode as jwsDecode } from "jws";
-import { JwtDecodeService } from "../core/jwt/JwtDecodeService";
-import { isReadonlyJsonObject, ReadonlyJsonObject } from "../core/Json";
-import { isBoolean } from "../core/types/Boolean";
-import { LogService } from "../core/LogService";
-import { isString } from "../core/types/String";
-import { LogLevel } from "../core/types/LogLevel";
+import { JwtDecodeService } from "../../core/jwt/JwtDecodeService";
+import { isReadonlyJsonObject, ReadonlyJsonObject } from "../../core/Json";
+import { isBoolean } from "../../core/types/Boolean";
+import { LogService } from "../../core/LogService";
+import { isString } from "../../core/types/String";
+import { LogLevel } from "../../core/types/LogLevel";
 
 const LOG = LogService.createLogger('JwtDecodeServiceImpl');
 

@@ -1,6 +1,7 @@
 // Copyright (c) 2023. Heusala Group Oy <info@hg.fi>. All rights reserved.
 
-import { LogLevel } from "../core/types/LogLevel";
+import { jest } from '@jest/globals';
+import { LogLevel } from "../../core/types/LogLevel";
 import { SmsVerificationServiceImpl } from "./SmsVerificationServiceImpl";
 
 jest.useFakeTimers();

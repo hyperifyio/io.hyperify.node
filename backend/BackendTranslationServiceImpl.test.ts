@@ -7,8 +7,8 @@ import { TranslationResourceObject } from "../../core/types/TranslationResourceO
 import { BackendTranslationServiceImpl } from "./BackendTranslationServiceImpl";
 
 jest.mock('i18next', () => ({
-    changeLanguage: jest.fn(),
-    init: jest.fn(),
+    changeLanguage: jest.fn<any>().mockResolvedValue(undefined),
+    init: jest.fn<any>().mockResolvedValue(undefined),
 }));
 
 describe('BackendTranslationServiceImpl', () => {
@@ -36,9 +36,9 @@ describe('BackendTranslationServiceImpl', () => {
             const keys = ['key1', 'key2'];
             const translationParams = { key: 'value' };
             const translatedKeys = { key1: 'key1:value', key2: 'key2:value' };
-            const t = jest.fn().mockImplementation((key, params) => `${key}:${params.key}`);
+            const t = jest.fn<any>().mockImplementation((key: any, params: any) => `${key}:${params.key}`);
 
-            (changeLanguage as jest.Mock).mockResolvedValueOnce(t);
+            (changeLanguage as jest.Mock<any>).mockResolvedValueOnce(t);
 
             const result = await service.translateKeys(lang, keys, translationParams);
 
@@ -50,11 +50,9 @@ describe('BackendTranslationServiceImpl', () => {
     describe('translateJob', () => {
         it('should execute translation job', async () => {
             const lang = Language.ENGLISH;
-            const callback = jest.fn((
-                // @ts-ignore
-                t: TranslationFunction) => 'translation_result');
+            const callback = jest.fn<any>(() => 'translation_result');
 
-            (changeLanguage as jest.Mock).mockResolvedValueOnce('translator');
+            (changeLanguage as jest.Mock<any>).mockResolvedValueOnce('translator');
 
             const result = await service.translateJob(lang, callback);
 

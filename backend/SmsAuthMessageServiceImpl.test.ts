@@ -1,10 +1,19 @@
 // Copyright (c) 2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { T_M_AUTH_CODE_BODY_HTML, T_M_AUTH_CODE_BODY_TEXT, T_M_AUTH_CODE_FOOTER_HTML, T_M_AUTH_CODE_FOOTER_TEXT, T_M_AUTH_CODE_HEADER_HTML, T_M_AUTH_CODE_HEADER_TEXT, T_M_AUTH_CODE_SUBJECT } from "../core/auth/sms/sms-auth-translations";
-import { TranslationService } from "../core/i18n/TranslationService";
-import { TwilioMessageClient } from "../core/twilio/TwilioMessageClient";
-import { Language } from "../core/types/Language";
-import { LogLevel } from "../core/types/LogLevel";
+import { jest } from '@jest/globals';
+import {
+    T_M_AUTH_CODE_BODY_HTML,
+    T_M_AUTH_CODE_BODY_TEXT,
+    T_M_AUTH_CODE_FOOTER_HTML,
+    T_M_AUTH_CODE_FOOTER_TEXT,
+    T_M_AUTH_CODE_HEADER_HTML,
+    T_M_AUTH_CODE_HEADER_TEXT,
+    T_M_AUTH_CODE_SUBJECT,
+} from "../../core/auth/sms/sms-auth-translations";
+import { TranslationService } from "../../core/i18n/TranslationService";
+import { TwilioMessageClient } from "../../core/twilio/TwilioMessageClient";
+import { Language } from "../../core/types/Language";
+import { LogLevel } from "../../core/types/LogLevel";
 import { SmsAuthMessageServiceImpl } from './SmsAuthMessageServiceImpl';
 
 describe('SmsAuthMessageServiceImpl', () => {
@@ -18,10 +27,10 @@ describe('SmsAuthMessageServiceImpl', () => {
     beforeEach(() => {
         // Create mocks
         mockSmsService = {
-            sendSms: jest.fn().mockResolvedValue({})
+            sendSms: jest.fn<any>().mockResolvedValue({})
         } as unknown as TwilioMessageClient;
         mockTranslationService = {
-            translateKeys: jest.fn().mockResolvedValue({})
+            translateKeys: jest.fn<any>().mockResolvedValue({})
         } as unknown as TranslationService;
     });
 

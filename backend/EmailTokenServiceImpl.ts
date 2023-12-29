@@ -1,14 +1,14 @@
 // Copyright (c) 2021-2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { EmailTokenDTO } from "../core/auth/email/types/EmailTokenDTO";
-import { JwtDecodeService } from "../core/jwt/JwtDecodeService";
-import { LogService } from "../core/LogService";
-import { EmailTokenService, EmailTokenServiceAlgorithm } from "../core/auth/EmailTokenService";
-import { JwtEngine } from "../core/jwt/JwtEngine";
+import { EmailTokenDTO } from "../../core/auth/email/types/EmailTokenDTO";
+import { JwtDecodeService } from "../../core/jwt/JwtDecodeService";
+import { LogService } from "../../core/LogService";
+import { EmailTokenService, EmailTokenServiceAlgorithm } from "../../core/auth/EmailTokenService";
+import { JwtEngine } from "../../core/jwt/JwtEngine";
+import { LogLevel } from "../../core/types/LogLevel";
+import { JwtUtils } from "../../core/jwt/JwtUtils";
+import { isString } from "../../core/types/String";
 import { JwtDecodeServiceImpl } from "./JwtDecodeServiceImpl";
-import { LogLevel } from "../core/types/LogLevel";
-import { JwtUtils } from "../core/jwt/JwtUtils";
-import { isString } from "../core/types/String";
 
 const UNVERIFIED_JWT_TOKEN_EXPIRATION_MINUTES = 5;
 const VERIFIED_JWT_TOKEN_EXPIRATION_DAYS = 365;
