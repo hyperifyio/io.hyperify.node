@@ -1,6 +1,6 @@
 // Copyright (c) 2021. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { LogService } from "../../../../core/LogService";
+import { LogService } from "../../../core/LogService";
 
 const LOG = LogService.createLogger('HtmlManager');
 

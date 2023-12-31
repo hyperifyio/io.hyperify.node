@@ -1,16 +1,16 @@
 // Copyright (c) 2021-2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { LogService } from "../../../../../LogService";
-import { Observer, ObserverCallback, ObserverDestructor } from "../../../../../Observer";
-import { SimpleRepositoryService } from "../../../../../simpleRepository/types/SimpleRepositoryService";
+import { LogService } from "../../../../../../core/LogService";
+import { Observer, ObserverCallback, ObserverDestructor } from "../../../../../../core/Observer";
+import { SimpleRepositoryService } from "../../../../../../core/simpleRepository/types/SimpleRepositoryService";
 import { StoredRoomRepositoryItem } from "./StoredRoomRepositoryItem";
-import { SimpleRepositoryServiceEvent } from "../../../../../simpleRepository/types/SimpleRepositoryServiceEvent";
-import { SimpleSharedClientService } from "../../../../../simpleRepository/types/SimpleSharedClientService";
-import { SimpleRepository } from "../../../../../simpleRepository/types/SimpleRepository";
-import { SimpleRepositoryInitializer } from "../../../../../simpleRepository/types/SimpleRepositoryInitializer";
+import { SimpleRepositoryServiceEvent } from "../../../../../../core/simpleRepository/types/SimpleRepositoryServiceEvent";
+import { SimpleSharedClientService } from "../../../../../../core/simpleRepository/types/SimpleSharedClientService";
+import { SimpleRepository } from "../../../../../../core/simpleRepository/types/SimpleRepository";
+import { SimpleRepositoryInitializer } from "../../../../../../core/simpleRepository/types/SimpleRepositoryInitializer";
 import { RoomRepositoryItem, parseRoomRepositoryItem, toStoredRoomRepositoryItem } from "./RoomRepositoryItem";
-import { SimpleRepositoryEntry } from "../../../../../simpleRepository/types/SimpleRepositoryEntry";
-import { map } from "../../../../../functions/map";
+import { SimpleRepositoryEntry } from "../../../../../../core/simpleRepository/types/SimpleRepositoryEntry";
+import { map } from "../../../../../../core/functions/map";
 
 const LOG = LogService.createLogger('RoomRepositoryService');
 

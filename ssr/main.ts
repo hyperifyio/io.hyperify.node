@@ -1,16 +1,14 @@
 // Copyright (c) 2021. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { Server as HttpServer, createServer as createHttpServer, IncomingMessage, ServerResponse } from 'http';
-
-import { ProcessUtils } from "../../../core/ProcessUtils";
-import { RequestServerImpl } from "../../RequestServerImpl";
+import { ProcessUtils } from "../../core/ProcessUtils";
 
 // Must be first import to define environment variables before anything else
 ProcessUtils.initEnvFromDefaultFiles();
 
 import {
     BACKEND_API_PROXY_URL,
-    BACKEND_API_URL, BACKEND_ENABLE_GZIP,
+    BACKEND_API_URL,
+    BACKEND_ENABLE_GZIP,
     BACKEND_LOG_LEVEL,
     BACKEND_PORT,
     BACKEND_SCRIPT_NAME,
@@ -18,22 +16,24 @@ import {
     DISCORD_LOG_NAME,
     DISCORD_LOG_URL
 } from "./constants/runtime";
-import { LogService } from "../../../core/LogService";
+import { LogService } from "../../core/LogService";
 
 LogService.setLogLevel(BACKEND_LOG_LEVEL);
 
+import { Server as HttpServer, createServer as createHttpServer, IncomingMessage, ServerResponse } from 'http';
+import { RequestServerImpl } from "../RequestServerImpl";
 import { ExitStatus } from "./types/ExitStatus";
-import { LogLevel } from "../../../core/types/LogLevel";
-import { RequestClientImpl } from "../../../core/RequestClientImpl";
-import { RequestRouterImpl } from "../../../core/requestServer/RequestRouterImpl";
-import { Headers } from "../../../core/request/types/Headers";
+import { LogLevel } from "../../core/types/LogLevel";
+import { RequestClientImpl } from "../../core/RequestClientImpl";
+import { RequestRouterImpl } from "../../core/requestServer/RequestRouterImpl";
+import { Headers } from "../../core/request/types/Headers";
 import { HttpServerController } from "./controller/HttpServerController";
-import { HttpService } from "../../../core/HttpService";
-import { HgNode } from "../../HgNode";
-import { isString } from "../../../core/types/String";
-import { ConsoleLogger } from "../../../core/logger/console/ConsoleLogger";
-import { DiscordLogger } from "../../../core/logger/discord/DiscordLogger";
-import { CompositeLogger } from "../../../core/logger/composite/CompositeLogger";
+import { HttpService } from "../../core/HttpService";
+import { HgNode } from "../HgNode";
+import { isString } from "../../core/types/String";
+import { ConsoleLogger } from "../../core/logger/console/ConsoleLogger";
+import { DiscordLogger } from "../../core/logger/discord/DiscordLogger";
+import { CompositeLogger } from "../../core/logger/composite/CompositeLogger";
 
 const LOG = LogService.createLogger('main');
 

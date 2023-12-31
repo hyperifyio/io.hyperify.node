@@ -1,16 +1,16 @@
 // Copyright (c) 2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
+import { MatrixType } from "../../../../../../../core/matrix/types/core/MatrixType";
 import {
     explainReadonlyJsonObject,
     isReadonlyJsonObject,
     ReadonlyJsonObject
-} from "../../../../../../Json";
-import { MatrixType } from "../../../../../types/core/MatrixType";
-import { explain, explainProperty } from "../../../../../../types/explain";
-import { explainString, explainStringOrUndefined, isString, isStringOrUndefined } from "../../../../../../types/String";
-import { explainNumber, isNumber } from "../../../../../../types/Number";
-import { explainRegularObject, isRegularObject } from "../../../../../../types/RegularObject";
-import { explainNoOtherKeys, hasNoOtherKeys } from "../../../../../../types/OtherKeys";
+} from "../../../../../../../core/Json";
+import { explain, explainProperty } from "../../../../../../../core/types/explain";
+import { explainString, explainStringOrUndefined, isString, isStringOrUndefined } from "../../../../../../../core/types/String";
+import { explainNumber, isNumber } from "../../../../../../../core/types/Number";
+import { explainRegularObject, isRegularObject } from "../../../../../../../core/types/RegularObject";
+import { explainNoOtherKeys, hasNoOtherKeys } from "../../../../../../../core/types/OtherKeys";
 
 /**
  * The base type for events saved in the repository.

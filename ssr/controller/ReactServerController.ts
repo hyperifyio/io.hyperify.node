@@ -1,15 +1,15 @@
 // Copyright (c) 2021-2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
 import { resolve as pathResolve } from "path";
-import { ResponseEntity } from "../../../../core/request/types/ResponseEntity";
-import { HelmetContextServiceImpl } from "../../../../frontend/services/HelmetContextServiceImpl";
+import { ResponseEntity } from "../../../core/request/types/ResponseEntity";
+import { HelmetContextServiceImpl } from "../../../frontend/services/HelmetContextServiceImpl";
 import { FileSystemService } from "../services/FileSystemService";
-import { LogService } from "../../../../core/LogService";
+import { LogService } from "../../../core/LogService";
 import { StaticReactAppService } from "../services/StaticReactAppService";
 import { HelmetServerState } from "react-helmet-async";
 import { HtmlManager } from "../services/HtmlManager";
-import { CacheService } from "../../../../core/CacheService";
-import { Html5 } from "../../../../core/html/Html5";
+import { CacheService } from "../../../core/CacheService";
+import { Html5 } from "../../../core/html/Html5";
 
 const LOG = LogService.createLogger('ReactServerController');
 

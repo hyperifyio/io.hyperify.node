@@ -1,12 +1,13 @@
 // Copyright (c) 2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
+import { types } from "pg";
+import { MatrixType } from "../../../../../../../core/matrix/types/core/MatrixType";
 import { createEventEntity, EventEntity } from "./EventEntity";
-import { MatrixType } from "../../../../../types/core/MatrixType";
-import { isJsonObject, ReadonlyJsonObject } from "../../../../../../Json";
-import { isString, isStringOrUndefined } from "../../../../../../types/String";
-import { isNumber } from "../../../../../../types/Number";
-import { isRegularObject } from "../../../../../../types/RegularObject";
-import { hasNoOtherKeys } from "../../../../../../types/OtherKeys";
+import { isJsonObject, ReadonlyJsonObject } from "../../../../../../../core/Json";
+import { isString, isStringOrUndefined } from "../../../../../../../core/types/String";
+import { isNumber } from "../../../../../../../core/types/Number";
+import { isRegularObject } from "../../../../../../../core/types/RegularObject";
+import { hasNoOtherKeys } from "../../../../../../../core/types/OtherKeys";
 
 /**
  * Base type for room events saved in the repository.

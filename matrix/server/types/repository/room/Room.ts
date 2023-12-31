@@ -1,10 +1,16 @@
 // Copyright (c) 2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { isMatrixVisibility, MatrixVisibility } from "../../../../types/request/createRoom/types/MatrixVisibility";
-import { isMatrixRoomVersion, MatrixRoomVersion } from "../../../../types/MatrixRoomVersion";
-import { isString } from "../../../../../types/String";
-import { isRegularObject } from "../../../../../types/RegularObject";
-import { hasNoOtherKeys } from "../../../../../types/OtherKeys";
+import {
+    isMatrixRoomVersion,
+    MatrixRoomVersion,
+} from "../../../../../../core/matrix/types/MatrixRoomVersion";
+import {
+    isMatrixVisibility,
+    MatrixVisibility,
+} from "../../../../../../core/matrix/types/request/createRoom/types/MatrixVisibility";
+import { hasNoOtherKeys } from "../../../../../../core/types/OtherKeys";
+import { isString } from "../../../../../../core/types/String";
+import { isRegularObject } from "../../../../../../core/types/RegularObject";
 
 export interface Room {
 

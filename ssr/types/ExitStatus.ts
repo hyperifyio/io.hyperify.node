@@ -1,6 +1,9 @@
 // Copyright (c) 2021. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { isNumber, parseInteger } from "../../../../core/types/Number";
+import {
+    isNumber,
+    parseInteger,
+} from "../../../core/types/Number";
 
 export enum ExitStatus {
 

@@ -1,19 +1,19 @@
 // Copyright (c) 2021-2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { map } from "../../../functions/map";
-import { parseJson } from "../../../Json";
-import { LogService } from "../../../LogService";
+import { parseJson } from "../../../../core/Json";
+import { map } from "../../../../core/functions/map";
+import { LogService } from "../../../../core/LogService";
 import {
     Observer,
     ObserverCallback,
     ObserverDestructor,
-} from "../../../Observer";
-import { SimpleRepository } from "../../../simpleRepository/types/SimpleRepository";
-import { SimpleRepositoryEntry } from "../../../simpleRepository/types/SimpleRepositoryEntry";
-import { SimpleRepositoryInitializer } from "../../../simpleRepository/types/SimpleRepositoryInitializer";
-import { SimpleRepositoryService } from "../../../simpleRepository/types/SimpleRepositoryService";
-import { SimpleRepositoryServiceEvent } from "../../../simpleRepository/types/SimpleRepositoryServiceEvent";
-import { SimpleSharedClientService } from "../../../simpleRepository/types/SimpleSharedClientService";
+} from "../../../../core/Observer";
+import { SimpleRepository } from "../../../../core/simpleRepository/types/SimpleRepository";
+import { SimpleRepositoryEntry } from "../../../../core/simpleRepository/types/SimpleRepositoryEntry";
+import { SimpleRepositoryInitializer } from "../../../../core/simpleRepository/types/SimpleRepositoryInitializer";
+import { SimpleRepositoryService } from "../../../../core/simpleRepository/types/SimpleRepositoryService";
+import { SimpleRepositoryServiceEvent } from "../../../../core/simpleRepository/types/SimpleRepositoryServiceEvent";
+import { SimpleSharedClientService } from "../../../../core/simpleRepository/types/SimpleSharedClientService";
 import { StoredDeviceRepositoryItem } from "./repository/device/StoredDeviceRepositoryItem";
 import { createDeviceRepositoryItem, DeviceRepositoryItem, parseDeviceRepositoryItem, toStoredDeviceRepositoryItem } from "./repository/device/DeviceRepositoryItem";
 import { isDevice } from "./repository/device/Device";

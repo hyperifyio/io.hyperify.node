@@ -1,9 +1,9 @@
 // Copyright (c) 2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { SimpleStoredRepositoryItem } from "../../../../../simpleRepository/types/SimpleStoredRepositoryItem";
-import { isString } from "../../../../../types/String";
-import { isRegularObject } from "../../../../../types/RegularObject";
-import { hasNoOtherKeys } from "../../../../../types/OtherKeys";
+import { SimpleStoredRepositoryItem } from "../../../../../../core/simpleRepository/types/SimpleStoredRepositoryItem";
+import { hasNoOtherKeys } from "../../../../../../core/types/OtherKeys";
+import { isString } from "../../../../../../core/types/String";
+import { isRegularObject } from "../../../../../../core/types/RegularObject";
 
 export interface StoredEventRepositoryItem extends SimpleStoredRepositoryItem {
 

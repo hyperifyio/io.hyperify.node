@@ -1,13 +1,16 @@
 // Copyright (c) 2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { SimpleRepositoryItem } from "../../../../../simpleRepository/types/SimpleRepositoryItem";
+import { parseJson } from "../../../../../../core/Json";
+import {
+    isMatrixVisibility,
+    MatrixVisibility,
+} from "../../../../../../core/matrix/types/request/createRoom/types/MatrixVisibility";
+import { SimpleRepositoryItem } from "../../../../../../core/simpleRepository/types/SimpleRepositoryItem";
 import { Room, isRoom } from "./Room";
-import { parseJson } from "../../../../../Json";
 import { createStoredRoomRepositoryItem, StoredRoomRepositoryItem } from "./StoredRoomRepositoryItem";
-import { isMatrixVisibility, MatrixVisibility } from "../../../../types/request/createRoom/types/MatrixVisibility";
-import { isString } from "../../../../../types/String";
-import { isRegularObject } from "../../../../../types/RegularObject";
-import { hasNoOtherKeys } from "../../../../../types/OtherKeys";
+import { isString } from "../../../../../../core/types/String";
+import { isRegularObject } from "../../../../../../core/types/RegularObject";
+import { hasNoOtherKeys } from "../../../../../../core/types/OtherKeys";
 
 export interface RoomRepositoryItem extends SimpleRepositoryItem<Room> {
     readonly id: string;

@@ -1,12 +1,12 @@
 // Copyright (c) 2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
+import { MatrixType } from "../../../../../../../core/matrix/types/core/MatrixType";
 import { createRoomEventEntity, RoomEventEntity } from "./RoomEventEntity";
-import { MatrixType } from "../../../../../types/core/MatrixType";
-import { isReadonlyJsonObject, ReadonlyJsonObject } from "../../../../../../Json";
-import { isString } from "../../../../../../types/String";
-import { isNumber } from "../../../../../../types/Number";
-import { isRegularObject } from "../../../../../../types/RegularObject";
-import { hasNoOtherKeys } from "../../../../../../types/OtherKeys";
+import { isReadonlyJsonObject, ReadonlyJsonObject } from "../../../../../../../core/Json";
+import { isString } from "../../../../../../../core/types/String";
+import { isNumber } from "../../../../../../../core/types/Number";
+import { isRegularObject } from "../../../../../../../core/types/RegularObject";
+import { hasNoOtherKeys } from "../../../../../../../core/types/OtherKeys";
 
 /**
  * Base type for room state events saved in the repository.

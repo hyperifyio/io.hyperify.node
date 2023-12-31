@@ -2,11 +2,12 @@
 
 import { LogLevel, parseLogLevel } from "../../../core/types/LogLevel";
 import {
-    BUILD_COMMAND_NAME, BUILD_ENABLE_GZIP,
-    BUILD_LOG_LEVEL
+    BUILD_COMMAND_NAME,
+    BUILD_ENABLE_GZIP,
+    BUILD_LOG_LEVEL,
 } from "./build";
 import { parseNonEmptyString } from "../../../core/types/String";
-import { parseBoolean } from "../../../../core/types/Boolean";
+import { parseBoolean } from "../../../core/types/Boolean";
 
 export const BACKEND_LOG_LEVEL       : LogLevel = parseLogLevel(parseNonEmptyString(process?.env?.BACKEND_LOG_LEVEL) ?? parseNonEmptyString(BUILD_LOG_LEVEL)) ?? LogLevel.INFO ;
 export const BACKEND_SCRIPT_NAME     : string   = parseNonEmptyString(process?.env?.BACKEND_SCRIPT_NAME)                   ?? BUILD_COMMAND_NAME;

@@ -1,24 +1,24 @@
 // Copyright (c) 2022-2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { JwtDecodeServiceImpl } from "../../../node/backend/JwtDecodeServiceImpl";
-import { ReadonlyJsonObject } from "../../Json";
-import { JwtEngine } from "../../jwt/JwtEngine";
-import { LogService } from "../../LogService";
-import { LogLevel } from "../../types/LogLevel";
+import { JwtEngine } from "../../../core/jwt/JwtEngine";
+import { MatrixType } from "../../../core/matrix/types/core/MatrixType";
+import { MatrixRoomCreateEventDTO } from "../../../core/matrix/types/event/roomCreate/MatrixRoomCreateEventDTO";
+import { RoomMemberContent3rdPartyInviteDTO } from "../../../core/matrix/types/event/roomMember/RoomMemberContent3rdPartyInviteDTO";
+import { createRoomMemberContentDTO } from "../../../core/matrix/types/event/roomMember/RoomMemberContentDTO";
+import { RoomMembershipState } from "../../../core/matrix/types/event/roomMember/RoomMembershipState";
+import { MatrixRoomVersion } from "../../../core/matrix/types/MatrixRoomVersion";
+import { MatrixVisibility } from "../../../core/matrix/types/request/createRoom/types/MatrixVisibility";
+import { JwtDecodeServiceImpl } from "../../backend/JwtDecodeServiceImpl";
+import { ReadonlyJsonObject } from "../../../core/Json";
+import { LogService } from "../../../core/LogService";
+import { LogLevel } from "../../../core/types/LogLevel";
 import { createEventEntity } from "./types/repository/event/entities/EventEntity";
 import { createRoom } from "./types/repository/room/Room";
 import { UserRepositoryItem } from "./types/repository/user/UserRepositoryItem";
 import { DeviceRepositoryItem } from "./types/repository/device/DeviceRepositoryItem";
 import { createUser, User } from "./types/repository/user/User";
 import { createRoomRepositoryItem, RoomRepositoryItem } from "./types/repository/room/RoomRepositoryItem";
-import { MatrixRoomVersion } from "../types/MatrixRoomVersion";
-import { MatrixVisibility } from "../types/request/createRoom/types/MatrixVisibility";
 import { createEventRepositoryItem, EventRepositoryItem } from "./types/repository/event/EventRepositoryItem";
-import { MatrixType } from "../types/core/MatrixType";
-import { MatrixRoomCreateEventDTO } from "../types/event/roomCreate/MatrixRoomCreateEventDTO";
-import { RoomMembershipState } from "../types/event/roomMember/RoomMembershipState";
-import { RoomMemberContent3rdPartyInviteDTO } from "../types/event/roomMember/RoomMemberContent3rdPartyInviteDTO";
-import { createRoomMemberContentDTO } from "../types/event/roomMember/RoomMemberContentDTO";
 
 const LOG = LogService.createLogger('MatrixServerService');
 

@@ -1,10 +1,10 @@
 // Copyright (c) 2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { SimpleStoredRepositoryItem } from "../../../../../simpleRepository/types/SimpleStoredRepositoryItem";
-import { MatrixVisibility } from "../../../../types/request/createRoom/types/MatrixVisibility";
-import { isString } from "../../../../../types/String";
-import { isRegularObject } from "../../../../../types/RegularObject";
-import { hasNoOtherKeys } from "../../../../../types/OtherKeys";
+import { MatrixVisibility } from "../../../../../../core/matrix/types/request/createRoom/types/MatrixVisibility";
+import { SimpleStoredRepositoryItem } from "../../../../../../core/simpleRepository/types/SimpleStoredRepositoryItem";
+import { isString } from "../../../../../../core/types/String";
+import { isRegularObject } from "../../../../../../core/types/RegularObject";
+import { hasNoOtherKeys } from "../../../../../../core/types/OtherKeys";
 
 export interface StoredRoomRepositoryItem extends SimpleStoredRepositoryItem {
 

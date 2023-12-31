@@ -1,16 +1,20 @@
 // Copyright (c) 2021-2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { LogService } from "../../../../../LogService";
-import { Observer, ObserverCallback, ObserverDestructor } from "../../../../../Observer";
-import { SimpleRepositoryService } from "../../../../../simpleRepository/types/SimpleRepositoryService";
+import { LogService } from "../../../../../../core/LogService";
+import {
+    Observer,
+    ObserverCallback,
+    ObserverDestructor,
+} from "../../../../../../core/Observer";
+import { SimpleRepository } from "../../../../../../core/simpleRepository/types/SimpleRepository";
+import { SimpleRepositoryEntry } from "../../../../../../core/simpleRepository/types/SimpleRepositoryEntry";
+import { SimpleRepositoryInitializer } from "../../../../../../core/simpleRepository/types/SimpleRepositoryInitializer";
+import { SimpleRepositoryService } from "../../../../../../core/simpleRepository/types/SimpleRepositoryService";
+import { SimpleRepositoryServiceEvent } from "../../../../../../core/simpleRepository/types/SimpleRepositoryServiceEvent";
+import { SimpleSharedClientService } from "../../../../../../core/simpleRepository/types/SimpleSharedClientService";
 import { StoredDeviceRepositoryItem } from "./StoredDeviceRepositoryItem";
-import { SimpleRepositoryServiceEvent } from "../../../../../simpleRepository/types/SimpleRepositoryServiceEvent";
-import { SimpleSharedClientService } from "../../../../../simpleRepository/types/SimpleSharedClientService";
-import { SimpleRepository } from "../../../../../simpleRepository/types/SimpleRepository";
-import { SimpleRepositoryInitializer } from "../../../../../simpleRepository/types/SimpleRepositoryInitializer";
 import { DeviceRepositoryItem, parseDeviceRepositoryItem, toStoredDeviceRepositoryItem } from "./DeviceRepositoryItem";
-import { SimpleRepositoryEntry } from "../../../../../simpleRepository/types/SimpleRepositoryEntry";
-import { map } from "../../../../../functions/map";
+import { map } from "../../../../../../core/functions/map";
 
 const LOG = LogService.createLogger('DeviceRepositoryService');
 

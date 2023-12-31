@@ -2,16 +2,16 @@
 
 import { IncomingMessage, ServerResponse } from "http";
 import { Server as StaticServer } from 'node-static';
-import { ResponseEntity } from "../../../../core/request/types/ResponseEntity";
-import { LogService } from "../../../../core/LogService";
+import { LogService } from "../../../core/LogService";
+import { ResponseEntity } from "../../../core/request/types/ResponseEntity";
 import { ReactServerController } from "./ReactServerController";
-import { WELL_KNOWN_HG_HEALTH_CHECK_END_POINT } from "../../../../core/constants/wellKnown";
-import { startsWith } from "../../../../core/functions/startsWith";
-import { createHealthCheckDTO } from "../../../../core/types/HealthCheckDTO";
-import { every } from "../../../../core/functions/every";
-import { some } from "../../../../core/functions/some";
-import { Headers } from "../../../../core/request/types/Headers";
-import { isArray } from "../../../../core/types/Array";
+import { WELL_KNOWN_HG_HEALTH_CHECK_END_POINT } from "../../../core/constants/wellKnown";
+import { startsWith } from "../../../core/functions/startsWith";
+import { createHealthCheckDTO } from "../../../core/types/HealthCheckDTO";
+import { every } from "../../../core/functions/every";
+import { some } from "../../../core/functions/some";
+import { Headers } from "../../../core/request/types/Headers";
+import { isArray } from "../../../core/types/Array";
 
 const LOG = LogService.createLogger('HttpServerController');
 

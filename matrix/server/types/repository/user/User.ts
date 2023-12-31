@@ -1,8 +1,8 @@
 // Copyright (c) 2022. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { isString, isStringOrUndefined } from "../../../../../types/String";
-import { isRegularObject } from "../../../../../types/RegularObject";
-import { hasNoOtherKeys } from "../../../../../types/OtherKeys";
+import { isString, isStringOrUndefined } from "../../../../../../core/types/String";
+import { isRegularObject } from "../../../../../../core/types/RegularObject";
+import { hasNoOtherKeys } from "../../../../../../core/types/OtherKeys";
 
 export interface User {
     readonly id        : string;
