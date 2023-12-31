@@ -2,9 +2,9 @@
 
 import { use } from "i18next";
 import { initReactI18next } from "react-i18next";
-import { LogService } from "../../../../core/LogService";
+import { LogService } from "../../../core/LogService";
 import { TRANSLATIONS, FRONTEND_DEFAULT_LANGUAGE } from "../../../../App";
-import { TranslationUtils } from "../../../../core/TranslationUtils";
+import { TranslationUtils } from "../../../core/TranslationUtils";
 
 const LOG = LogService.createLogger('ssr/i18n');
 

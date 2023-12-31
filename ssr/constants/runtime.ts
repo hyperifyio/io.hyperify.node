@@ -1,11 +1,11 @@
 // Copyright (c) 2021-2023. Heusala Group Oy <info@heusalagroup.fi>. All rights reserved.
 
-import { LogLevel, parseLogLevel } from "../../../../core/types/LogLevel";
+import { LogLevel, parseLogLevel } from "../../../core/types/LogLevel";
 import {
     BUILD_COMMAND_NAME, BUILD_ENABLE_GZIP,
     BUILD_LOG_LEVEL
 } from "./build";
-import { parseNonEmptyString } from "../../../../core/types/String";
+import { parseNonEmptyString } from "../../../core/types/String";
 import { parseBoolean } from "../../../../core/types/Boolean";
 
 export const BACKEND_LOG_LEVEL       : LogLevel = parseLogLevel(parseNonEmptyString(process?.env?.BACKEND_LOG_LEVEL) ?? parseNonEmptyString(BUILD_LOG_LEVEL)) ?? LogLevel.INFO ;

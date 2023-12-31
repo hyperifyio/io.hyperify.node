@@ -3,8 +3,8 @@
 // See also rollup.config.js
 //
 
-import { isString, parseNonEmptyString as _parseNonEmptyString } from "../../../../core/types/String";
-import { parseBoolean as _parseBoolean } from "../../../../core/types/Boolean";
+import { isString, parseNonEmptyString as _parseNonEmptyString } from "../../../core/types/String";
+import { parseBoolean as _parseBoolean } from "../../../core/types/Boolean";
 
 function parseBoolean (value : any) : boolean | undefined {
     if (value === undefined) return undefined;

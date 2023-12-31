@@ -3,5 +3,5 @@
 import "./importInterop";
 import "./i18n";
 
-import { App } from "../../../../App";
+import { App } from "../../../../../App";
 export { App };
