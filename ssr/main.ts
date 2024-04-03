@@ -42,6 +42,15 @@ export function setMainReactRoutes (routes : readonly string[]) {
     ALL_REACT_ROUTES = routes;
 }
 
+export interface InitializeCallback {
+    () : void;
+}
+
+let INITIALIZERS : InitializeCallback[] = [];
+export function addMainInit ( f: InitializeCallback) {
+    INITIALIZERS.push(f);
+}
+
 export async function main (
     args: any[] = []
 ) : Promise<ExitStatus> {
@@ -108,6 +117,11 @@ export async function main (
         if (initFile) {
             require(initFile);
         }
+
+        INITIALIZERS.forEach((f) => {
+            f();
+        });
+        INITIALIZERS = [];
 
         const App = isString(appComponent) ? require(appComponent) : appComponent;
 
