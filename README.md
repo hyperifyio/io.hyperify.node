@@ -1,6 +1,6 @@
 **Join our [Discord](https://discord.gg/UBTrHxA78f) to discuss about our software!**
 
-# fi.hg.node
+# io.hyperify.node
 
 HG's Git Submodule for code depending on NodeJS implementation.
 
@@ -10,19 +10,19 @@ HG's Git Submodule for code depending on NodeJS implementation.
 npm i @types/nodejs
 ```
 
-Our [fi.hg.core](https://github.com/heusalagroup/fi.hg.core) is also required dependency:
+Our [io.hyperify.core](https://github.com/hyperifyio/io.hyperify.core) is also required dependency:
 
 ```shell
 mkdir -p src/fi/hg
-git submodule add git@github.com:heusalagroup/fi.hg.core.git src/fi/hg/core
-git config -f .gitmodules submodule.src/fi/hg/core.branch main
+git submodule add git@github.com:hyperifyio/io.hyperify.core.git src/io/hyperify/core
+git config -f .gitmodules submodule.src/io/hyperify/core.branch main
 ```
 
 Finally, you can set up the module itself:
 
 ```shell
-git submodule add git@github.com:heusalagroup/fi.hg.node.git src/fi/hg/node
-git config -f .gitmodules submodule.src/fi/hg/node.branch main
+git submodule add git@github.com:hyperifyio/io.hyperify.node.git src/io/hyperify/node
+git config -f .gitmodules submodule.src/io/hyperify/node.branch main
 ```
 
 ### See also 

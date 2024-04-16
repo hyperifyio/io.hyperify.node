@@ -1,6 +1,6 @@
 **Join our [Discord](https://discord.gg/UBTrHxA78f) to discuss about our software!**
 
-# @heusalagroup/fi.hg.create
+# @hyperifyio/io.hyperify.create
 
 Sub module for [project templates](https://hg.fi/#project-templates).
 
@@ -9,8 +9,8 @@ Sub module for [project templates](https://hg.fi/#project-templates).
 Using [`hgm`](https://github.com/heusalagroup/hgm):
 
 ```shell
-hgm i fi.hg.core
-hgm i fi.hg.create
+hgm i io.hyperify.core
+hgm i io.hyperify.create
 ```
 
 ### Required dependencies

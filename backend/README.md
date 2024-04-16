@@ -1,6 +1,6 @@
 **Join our [Discord](https://discord.gg/UBTrHxA78f) to discuss about our software!**
 
-# fi.hg.backend
+# io.hyperify.backend
 
 HG Backend module
 
@@ -12,19 +12,19 @@ This module depends on `nodemailer`, `i18next` and `jws` modules:
 npm i '@types/i18next' i18next '@types/nodemailer' nodemailer '@types/jws' jws
 ```
 
-Our [fi.hg.core](https://github.com:heusalagroup/fi.hg.core) is also required dependency:
+Our [io.hyperify.core](https://github.com:hyperifyio/io.hyperify.core) is also required dependency:
 
 ```shell
 mkdir -p src/fi/hg
-git submodule add git@github.com:heusalagroup/fi.hg.core.git src/fi/hg/core
-git config -f .gitmodules submodule.src/fi/hg/core.branch main
+git submodule add git@github.com:hyperifyio/io.hyperify.core.git src/io/hyperify/core
+git config -f .gitmodules submodule.src/io/hyperify/core.branch main
 ```
 
 Finally, you can set up the module itself:
 
 ```shell
-git submodule add git@github.com:heusalagroup/fi.hg.backend.git src/fi/hg/backend
-git config -f .gitmodules submodule.src/fi/hg/backend.branch main
+git submodule add git@github.com:hyperifyio/io.hyperify.backend.git src/io/hyperify/backend
+git config -f .gitmodules submodule.src/io/hyperify/backend.branch main
 ```
 
 See also [@heusalagroup/create-backend](https://github.com/heusalagroup/create-backend) for how to initialize your own backend project.

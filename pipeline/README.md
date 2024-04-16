@@ -1,23 +1,23 @@
 **Join our [Discord](https://discord.gg/UBTrHxA78f) to discuss about our software!**
 
-# @heusalagroup/fi.hg.pipeline
+# @hyperifyio/io.hyperify.pipeline
 
 This is our Pipeline Processor Library written in TypeScript.
 
-For the installable Pipeline Runner, check out [@heusalagroup/fi.hg.pipeline-runner](https://github.com/heusalagroup/fi.hg.pipeline-runner).
+For the installable Pipeline Runner, check out [@hyperifyio/io.hyperify.pipeline-runner](https://github.com/hyperifyio/io.hyperify.pipeline-runner).
 
 For the documentation about our pipeline format, see [Getting started with Pipeline model](https://www.sendanor.com/pipelines/model/).
 
 ### It doesn't have many runtime dependencies
 
-This library expects [@heusalagroup/fi.hg.core](https://github.com/heusalagroup/fi.hg.core) to be located 
+This library expects [@hyperifyio/io.hyperify.core](https://github.com/hyperifyio/io.hyperify.core) to be located 
 in the relative path `../ts` and only required dependency it has is for [Lodash 
 library](https://lodash.com/).
 
 ### It's well tested
 
 Our unit tests exists beside the code. To run tests, check out our test repository 
-[@heusalagroup/fi.hg.test](https://github.com/heusalagroup/fi.hg.test).
+[@hyperifyio/io.hyperify.test](https://github.com/hyperifyio/io.hyperify.test).
 
 ### We don't have traditional releases
 
@@ -31,11 +31,11 @@ Recommended way to initialize your project is like this:
 ```
 mkdir -p src/nor
 
-git submodule add git@github.com:heusalagroup/fi.hg.core.git src/hg/ts
-git config -f .gitmodules submodule.src/hg/ts.branch main
+git submodule add git@github.com:hyperifyio/io.hyperify.core.git src/../io/hyperify/ts
+git config -f .gitmodules submodule.src/../io/hyperify/ts.branch main
 
-git submodule add git@github.com:heusalagroup/fi.hg.pipeline.git src/hg/pipeline
-git config -f .gitmodules submodule.src/hg/pipeline.branch main
+git submodule add git@github.com:hyperifyio/io.hyperify.pipeline.git src/../io/hyperify/pipeline
+git config -f .gitmodules submodule.src/../io/hyperify/pipeline.branch main
 ```
 
 Only required dependency is to [the Lodash library](https://lodash.com/):

@@ -1,6 +1,6 @@
 **Join our [Discord](https://discord.gg/UBTrHxA78f) to discuss about our software!**
 
-# @heusalagroup/fi.hg.ssr
+# @hyperifyio/io.hyperify.ssr
 
 ReactJS Server Side Rendering Library as a Git Submodule, written for TypeScript.
 
@@ -9,8 +9,8 @@ ReactJS Server Side Rendering Library as a Git Submodule, written for TypeScript
 Use it as a git submodule using [hgm](https://github.com/heusalagroup/hgm):
 
 ```shell
-hgm install fi.hg.ssr
-hgm install fi.hg.core
+hgm install io.hyperify.ssr
+hgm install io.hyperify.core
 ```
 
 You also will need the Lodash library: 
@@ -23,11 +23,11 @@ npm install --save-dev lodash '@types/lodash'
 
 ```shell
 mkdir -p src/fi/hg
-git submodule add git@github.com:heusalagroup/fi.hg.ssr.git src/fi/hg/ssr
-git config -f .gitmodules submodule.src/fi/hg/ssr.branch main
+git submodule add git@github.com:hyperifyio/io.hyperify.ssr.git src/io/hyperify/ssr
+git config -f .gitmodules submodule.src/io/hyperify/ssr.branch main
 
-git submodule add git@github.com:heusalagroup/fi.hg.core.git src/fi/hg/core
-git config -f .gitmodules submodule.src/fi/hg/core.branch main
+git submodule add git@github.com:hyperifyio/io.hyperify.core.git src/io/hyperify/core
+git config -f .gitmodules submodule.src/io/hyperify/core.branch main
 
 npm install --save-dev lodash '@types/lodash'
 ```
